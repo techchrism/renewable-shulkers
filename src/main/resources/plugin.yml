@@ -1,0 +1,5 @@
+name: RenewableShulkers
+version: ${project.version}
+main: me.techchrism.renewableshulkers.RenewableShulkers
+api-version: 1.13
+author: Techdoodle
