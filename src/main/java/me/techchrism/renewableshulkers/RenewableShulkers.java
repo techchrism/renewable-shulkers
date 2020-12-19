@@ -26,12 +26,17 @@ public class RenewableShulkers extends JavaPlugin implements Listener
         try
         {
             shulkerTeleport = getShulkerTeleportMethod();
-            
+            if(shulkerTeleport == null)
+            {
+                getLogger().severe("Could not find shulker teleportation method!");
+                setEnabled(false);
+            }
         }
         catch(ClassNotFoundException e)
         {
             getLogger().severe("Error getting shulker teleportation method:");
             e.printStackTrace();
+            setEnabled(false);
         }
     }
     
